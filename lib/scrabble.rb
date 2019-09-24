@@ -18,7 +18,7 @@ class Scrabble
   def score
     return 0 if !@word.is_a? String
     score = 0
-    @word.chomp('\t\n').upcase.chars do |letter|
+    @word.upcase.strip.chars do |letter|
       @scores.each { |l, s| score += s if l.include? letter }
     end
     score

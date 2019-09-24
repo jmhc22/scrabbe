@@ -41,9 +41,8 @@ describe Scrabble do
     end
 
     it 'returns 0 for " \t\n"' do
-      scrabble = Scrabble.new(' \t\n')
+      scrabble = Scrabble.new(" \t\n")
       expect(scrabble.score).to eq 0
     end
-
   end
 end
